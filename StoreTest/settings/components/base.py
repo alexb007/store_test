@@ -24,7 +24,7 @@ INSTALLED_APPS = [
     'celery',
 ]
 
-SILK_ENABLED = False
+SILK_ENABLED = True
 if SILK_ENABLED:
     INSTALLED_APPS.append('silk')
 
