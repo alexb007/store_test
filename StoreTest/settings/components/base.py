@@ -6,7 +6,7 @@ SECRET_KEY = 'wq!zmeuqt5nh55-sdf8g2dn&^2&0zlujwvzqi_m-4x^^*n&=r9'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1:8000']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -16,6 +16,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core.apps.CoreConfig',
+    'store.apps.StoreConfig',
     'rest_framework',
     'django_redis',
     'django_filters',
@@ -23,7 +24,7 @@ INSTALLED_APPS = [
     'celery',
 ]
 
-SILK_ENABLED = True
+SILK_ENABLED = False
 if SILK_ENABLED:
     INSTALLED_APPS.append('silk')
 
@@ -44,8 +45,6 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'StoreTest.wsgi.application'
-
 LANGUAGE_CODE = 'en'
 
 LANGUAGES = [
@@ -60,6 +59,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = False
+
+ROOT_URLCONF = 'StoreTest.urls'
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
