@@ -1,5 +1,3 @@
-import json
-
 from store.serializers import OrderSerializer
 from store.tasks import create_order, delete_order
 
