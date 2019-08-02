@@ -32,4 +32,4 @@ JWT_AUTH = {
 
 API_KEY = settings.SECRET_KEY
 WAREHOUSE_API_KEY = 'l4a1s%%1*9jf*7@)jbm(k+-*8mu!@i*jiq%(zq_6phibww9&k7'
-WAREHOUSE_API_URL = 'http://localhost:8001/api'
+WAREHOUSE_API_URL = settings.ENVIRON.str('WAREHOUSE_API_URL', default='http://localhost:8001/api')
